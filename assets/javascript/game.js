@@ -8,7 +8,7 @@ var currentLetters = [];
 var winCounter = 0;
 var lossCounter = 0;
 var numGuesses = 12;
-var banlks = 0
+var blanks = 0
 
 var guessedLetter = [];
 var correctLetter = [];
@@ -17,10 +17,9 @@ var incorrectGuess = [];
 
 currentWord = simpsons[Math.floor(Math.random() * simpsons.length)];
 
-currentLetters = currentWord.split("");
 
 blanks = currentLetters.length;
-  for (var i = 0; i < blanks; i++) {
+  for (var i = 0; i < blanks; i++) 
     blanksAndSuccess.push("_")
 
-document.write(currentWord)}
+console.log(currentWord)
