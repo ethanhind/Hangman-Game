@@ -1,5 +1,5 @@
 
-var fruitWords = simpsons = ["homer", "marge", "bart", "lisa", "maggie", "milhouse", "moe", "apu", "ned", "patty", "selma"];
+var simpsons = ["homer", "marge", "bart", "lisa", "maggie", "milhouse", "moe", "apu", "ned", "patty", "selma"];
 var blanksAndSuccess = []; 
 var blanks = 0; 
 var currentWord = "";
@@ -63,7 +63,7 @@ function startGame() {
   guessedLetter = [];
   incorrectGuess = [];
   
-  currentWord = fruitWords[Math.floor(Math.random() * fruitWords.length)];
+  currentWord = simpsons[Math.floor(Math.random() * simpsons.length)];
 
   
   currentLetters = currentWord.split("");
@@ -119,11 +119,11 @@ function round() {
   if (currentLetters.toString() == blanksAndSuccess.toString()) {
     winCounter++; 
     document.getElementById("word").innerHTML = "The last word was " + currentWord;
-    alert("You win! The word was " + currentWord); // give the user an alert   
+    alert("You win! The word was " + currentWord);   
 
     
     document.getElementById("winCounter").innerHTML = "You have won " + winCounter + " game(s)";
-    startGame(); // restart the game 
+    startGame(); 
   }
 
   
@@ -131,7 +131,7 @@ function round() {
     lossCounter++; 
     document.getElementById("word").innerHTML = "The last word was " + currentWord;
 
-    alert("You lose. The word was " + currentWord); // give the user an alert
+    alert("You lose. The word was " + currentWord); 
 
     
     document.getElementById("lossCounter").innerHTML = "You have lost " + lossCounter + " game(s)";
